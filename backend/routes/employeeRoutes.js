@@ -9,6 +9,9 @@ router.use(verifyToken, roleCheck(["Employee"]));
 
 router.get("/profile", employeeController.getProfile);
 router.put("/profile", employeeController.updateProfile);
+router.post("/attendance", employeeController.markAttendance);
+router.post("/leaves", employeeController.requestLeave);
+
 
 
 module.exports = router;
