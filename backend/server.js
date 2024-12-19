@@ -1,16 +1,15 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
-const cors = require("cors");
+
 const employeeRoutes = require("./routes/employeeRoutes")
 const authRoutes = require("./routes/authRoutes");
+
 
 
 dotenv.config();
 
 const app = express();
-
-app.use(cors());
 
 app.use(express.json());
 
