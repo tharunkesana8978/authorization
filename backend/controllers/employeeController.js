@@ -1,4 +1,6 @@
 const User = require("../models/User");
+const Task = require("../models/Task");
+const mongoose = require("mongoose");
 const Attendance = require("../models/Attendance");
 const LeaveRequest = require("../models/LeaveRequest");
 
@@ -54,3 +56,16 @@ exports.requestLeave = async (req, res) => {
         res.status(400).json({ message: err.message});
     }
 };
+
+
+
+exports.getAssignedTasks = async (req, res) => {
+    try {
+        const tasks = await Task.find({ assignedTo: req.user.id });
+
+        res.json({ message: "Tasks fetched successfully", tasks });
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+};
+
