@@ -44,3 +44,18 @@ exports.manageLeaveRequest = async (req, res) => {
         res.status(400).json({ message: err.message });
     }
 };
+exports.getLeaveRequests = async (req, res) => {
+    try {
+        const { department } = req.user;
+
+        const employees = await User.find({ department, role: "Employee" });
+        const employeeIds = employees.map(emp => emp._id);
+
+       
+        const leaveRequests = await LeaveRequest.find({ employee: { $in: employeeIds } });
+
+        res.json({ message: "Leave requests fetched successfully", leaveRequests });
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+};

@@ -10,5 +10,6 @@ router.use(verifyToken, roleCheck(["Manager"]));
 router.get("/employees", managerController.getDepartmentEmployees);
 router.post("/tasks", managerController.assignTask);
 router.put("/leaves/:id", managerController.manageLeaveRequest);
+router.get("/leaves", managerController.getLeaveRequests);
 
 module.exports = router;
