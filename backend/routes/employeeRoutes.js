@@ -11,6 +11,8 @@ router.get("/profile", employeeController.getProfile);
 router.put("/profile/:id", employeeController.updateProfile);
 router.post("/attendance/:id", employeeController.markAttendance);
 router.post("/leaves/:id", employeeController.requestLeave);
+router.get("/tasks", employeeController.getAssignedTasks);
+
 
 
 
