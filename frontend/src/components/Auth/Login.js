@@ -25,9 +25,9 @@ const Login = () => {
 
             
             const user = JSON.parse(atob(data.token.split(".")[1])); 
-            if (user.role === "Admin") navigate("/admin-dashboard");
-            else if (user.role === "Manager") navigate("/manager-dashboard");
-            else navigate("/employee-dashboard");
+            if (user.role === "Admin") navigate("/admin/dashboard");
+            else if (user.role === "Manager") navigate("/manager/dashboard");
+            else navigate("/employee/dashboard");
         } catch (error) {
             console.error(error);
             alert("Login failed.");

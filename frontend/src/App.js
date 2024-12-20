@@ -5,6 +5,10 @@ import Login from "./components/Auth/Login";
 
 import Register from "./components/Auth/Register";
 
+import Dashboard from "./components/Admin/Dashboard";
+import EmployeeList from "./components/Admin/EmployeeList";
+
+
 
 
 function App() {
@@ -16,6 +20,9 @@ function App() {
 
                 
             <Route path="/" element={<Register />} />
+
+            <Route path="/admin/dashboard" element={<Dashboard />} />
+            <Route path="/admin/employees" element={<EmployeeList />} />
 
             </Routes>
         </Router>
