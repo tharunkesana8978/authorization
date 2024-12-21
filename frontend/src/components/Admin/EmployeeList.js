@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import API from "../../utils/api";
+import './EmployeeList.css';
 
 const EmployeeList = () => {
     const [employees, setEmployees] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchEmployees = async () => {
@@ -11,6 +14,16 @@ const EmployeeList = () => {
         };
         fetchEmployees();
     }, []);
+
+    const handleDelete = async (id) => {
+        try {
+            await API.delete(`/admin/employees/${id}`);
+            alert("Employee deleted successfully!");
+            setEmployees(employees.filter((emp) => emp._id !== id));
+        } catch (error) {
+            alert("Failed to delete employee.");
+        }
+    };
 
     return (
         <div className="container">
@@ -33,8 +46,10 @@ const EmployeeList = () => {
                             <td>{emp.role}</td>
                             <td>{emp.department}</td>
                             <td>
-                                <button>Edit</button>
-                                <button>Delete</button>
+                                <button onClick={() => navigate(`/admin/employees/edit/${emp._id}`)}>
+                                    Edit
+                                </button>
+                                <button onClick={() => handleDelete(emp._id)}>Delete</button>
                             </td>
                         </tr>
                     ))}
@@ -43,6 +58,5 @@ const EmployeeList = () => {
         </div>
     );
 };
-
 
 export default EmployeeList;
