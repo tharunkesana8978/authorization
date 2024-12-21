@@ -9,7 +9,7 @@ const ManagerDashboard = () => {
       <nav>
         <ul>
           <li><Link to="/manager/employees">Employees</Link></li>
-          <li><Link to="/manager/tasks">Assign Tasks</Link></li>
+          <li><Link to="/manager/task">Assign Tasks</Link></li>
           <li><Link to="/manager/leaves">Manage Leave Requests</Link></li>
         </ul>
       </nav>
