@@ -9,8 +9,8 @@ router.use(verifyToken, roleCheck(["Employee"]));
 
 router.get("/profile", employeeController.getProfile);
 router.put("/profile/:id", employeeController.updateProfile);
-router.post("/attendance/:id", employeeController.markAttendance);
-router.post("/leaves/:id", employeeController.requestLeave);
+router.post("/attendance/", employeeController.markAttendance);
+router.post("/leaves/", employeeController.requestLeave);
 router.get("/tasks", employeeController.getAssignedTasks);
 
 
