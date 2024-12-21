@@ -1,0 +1,39 @@
+.manager-dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .manager-dashboard h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .manager-dashboard nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .manager-dashboard nav ul li {
+    margin: 10px 0;
+  }
+  
+  .manager-dashboard nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .manager-dashboard nav ul li a:hover {
+    color: #0056b3;
+  }
+  
