@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API from "../../utils/api";
-
+import "./LeaveRequests.css"
 const LeaveRequests = () => {
   const [leaveRequests, setLeaveRequests] = useState([]);
 

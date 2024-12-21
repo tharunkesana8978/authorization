@@ -1,0 +1,56 @@
+.leave-requests {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leave-requests h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .leave-requests ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .leave-requests li {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+  }
+  
+  .leave-requests p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .leave-requests button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .leave-requests button:first-child {
+    background-color: #28a745;
+  }
+  
+  .leave-requests button:last-child {
+    background-color: #dc3545;
+  }
+  
+  .leave-requests button:hover {
+    opacity: 0.9;
+  }
+  

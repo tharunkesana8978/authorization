@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import API from "../../utils/api";
-
+import "./Task.css";
 const Tasks = () => {
   const [taskData, setTaskData] = useState({
     title: "",

@@ -17,7 +17,7 @@ import Tasks from "./components/Employee/AssignedTasks";
 
 import ManagerDashboard from "./components/Manager/ManagerDashboard";
 import Employees from "./components/Manager/Employees";
-import Tasks from "./components/Manager/Tasks";
+import Task from "./components/Manager/Task";
 import LeaveRequests from "./components/Manager/LeaveRequests";
 
 
@@ -42,7 +42,7 @@ function App() {
 
             <Route path="/manager/dashboard" element={<ManagerDashboard />} />
                 <Route path="/manager/employees" element={<Employees />} />
-                <Route path="/manager/tasks" element={<Tasks />} />
+                <Route path="/manager/task" element={<Task />} />
                 <Route path="/manager/leaves" element={<LeaveRequests />} />
 
 
